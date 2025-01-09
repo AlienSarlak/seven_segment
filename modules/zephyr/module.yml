@@ -1,0 +1,15 @@
+# SPDX-License-Identifier: Apache-2.0
+
+# build:
+#   kconfig: Kconfig
+#   cmake: .
+#   settings:
+#     dts_root: .
+
+
+name: sevenseg
+build:
+  cmake: sevenseg/.
+  kconfig: sevenseg/Kconfig
+  settings:
+    dts_root: sevenseg/.

@@ -1,0 +1,35 @@
+# Copyright (c) 2024
+# SPDX-License-Identifier: Apache-2.0
+
+description: 7seg display
+
+compatible: "seven-segment"
+
+include: base.yaml
+
+properties:
+  segment-gpios:
+    type: phandle-array
+    required: true
+    description: |
+      GPIO phandles with flags for the seven-segment display pins in order: g, f, e, d, c, b, a.
+  drive-mode:
+    type: int
+    required: true
+    default: 1
+    description: |
+      Drive mode of the display: 0 for Common Cathode, 1 for Common Anode.
+    enum: [0, 1] # Restricts values to 0 or 1
+
+  common-gpios:
+    type: phandle-array
+    required: true
+    description: |
+      GPIO phandle with flags for the common pin of the display.
+
+  refresh-rate:
+    type: int
+    required: true
+    default: 0
+    description: |
+      Refresh rate of the display in Hz.

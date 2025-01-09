@@ -1,0 +1,17 @@
+/ {
+    seven_segment: seven_segment {
+        compatible = "seven-segment";
+        segment-gpios =
+                <&gpio0_31 10 GPIO_ACTIVE_HIGH>,
+                <&gpio0_31 28 GPIO_ACTIVE_HIGH>,
+                <&gpio0_31 16 GPIO_ACTIVE_HIGH>,
+                <&gpio0_31 18 GPIO_ACTIVE_HIGH>,
+                <&gpio0_31 19 GPIO_ACTIVE_HIGH>,
+                <&gpio0_31 30 GPIO_ACTIVE_HIGH>,
+                <&gpio0_31 15 GPIO_ACTIVE_HIGH>;
+        drive-mode = <0>; /* 0: Common Cathode, 1: Common Anode */
+        common-gpios = <&gpio0_31 5 GPIO_ACTIVE_HIGH>;
+        refresh-rate = <0>;
+        status="okay";
+    };
+};

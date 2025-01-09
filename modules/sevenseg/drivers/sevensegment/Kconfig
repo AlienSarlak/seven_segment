@@ -1,0 +1,9 @@
+# Copyright (c) 2024 Ali Sarlak
+# SPDX-License-Identifier: Apache-2.0
+
+config SEVENSEGMENT
+	bool "Seven Segment Display"
+	default y
+	select GPIO
+	help
+	  Seven Segment Digit Display.
